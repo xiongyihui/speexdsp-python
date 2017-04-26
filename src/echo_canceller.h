@@ -3,6 +3,7 @@
 #define __ECHO_CANCELLER_H__
 
 #include <string>
+#include <stdint.h>
 
 class EchoCanceller
 {
