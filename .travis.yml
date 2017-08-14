@@ -10,10 +10,12 @@ python:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y swig libspeexdsp-dev
+  - sudo apt-get install -qq build-essential python-dev swig libspeexdsp-dev
 
 install:
-  - pip install .
+  - python setup.py build
+  - python setup.py bdist_wheel
+  - pip install ./dist/speexdsp*.whl
 
 script: pytest
 
