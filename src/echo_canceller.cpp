@@ -1,4 +1,6 @@
 
+#include <stdint.h>
+
 #include "echo_canceller.h"
 
 #include "speex/speex_echo.h"
