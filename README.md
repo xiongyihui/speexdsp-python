@@ -1,10 +1,13 @@
 speexdsp for python
 ===================
 
+[![Build Status](https://travis-ci.org/xiongyihui/speexdsp-python.svg?branch=master)](https://travis-ci.org/xiongyihui/speexdsp-python)
+
 ## Requirements
 + swig
 + compile toolchain
 + python
++ libspeexdsp-dev
 
 ## Build
 There are two ways to build the package.
@@ -12,9 +15,10 @@ There are two ways to build the package.
 1. using setup.py
 
     ```
+    sudo apt install libspeexdsp-dev
     git clone https://github.com/xiongyihui/speexdsp-python.git
     cd speexdsp-python
-    sudo python setup.py install
+    python setup.py install
     ```
 
 2. using Makefile
