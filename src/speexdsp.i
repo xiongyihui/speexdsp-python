@@ -1,6 +1,12 @@
 // speexdsp.i
 
+
 %module speexdsp
+
+%begin %{
+#define SWIG_PYTHON_STRICT_BYTE_CHAR
+%}
+
 %include "std_string.i"
 
 %{
