@@ -30,7 +30,7 @@ There are two ways to build the package.
     ```
 
 ## Get started
-```
+```python
 """Acoustic Echo Cancellation for wav files."""
 
 import wave

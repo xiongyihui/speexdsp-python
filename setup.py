@@ -1,57 +1,17 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-
-Dependencies
-------------
-
-* `speexdsp <https://github.com/xiph/speexdsp>`_
-
-Install
--------
-
-.. code:: bash
-
-    pip install speexdsp
-
-or
---
-
-.. code:: bash
-
-    git clone https://github.com/xiongyihui/speexdsp-python.git
-    cd speexdsp-python
-    python setup.py install
-
-Import
-------
-
-.. code:: python
-
-from speexdsp import EchoCanceller
-"""
+# -*- coding: utf-8 -*-
 
 import sys
 from glob import glob
-try:
-    from setuptools import setup, Extension
-    from distutils.command.build import build
-    from setuptools.command.install import install
-except ImportError:
-    from distutils.core import setup
-    from distutils.extension import Extension
-    from distutils.command.build import build
-    from distutils.command.install import install
+from setuptools import setup, Extension
+from distutils.command.build import build
 
-PY2 = sys.version_info[0] == 2
 
+with open('README.md') as f:
+    long_description = f.read()
 
 include_dirs = ['src']
-
 libraries = ['speexdsp', 'stdc++']
-
 define_macros = []
-
 extra_compile_args = []
 
 sources = (
@@ -67,9 +27,10 @@ swig_opts = (
 
 setup(
     name='speexdsp',
-    version='0.0.1',
+    version='0.1.0',
     description='Python bindings of speexdsp library',
-    long_description=__doc__,
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Yihui Xiong',
     author_email='yihui.xiong@hotmail.com',
     maintainer='Yihui Xiong',
