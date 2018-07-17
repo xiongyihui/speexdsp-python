@@ -27,7 +27,7 @@ swig_opts = (
 
 setup(
     name='speexdsp',
-    version='0.1.0',
+    version='0.1.1',
     description='Python bindings of speexdsp library',
     long_description=long_description,
     long_description_content_type='text/markdown',

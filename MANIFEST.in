@@ -1,0 +1,4 @@
+include README.md
+exclude .gitignore .gitmodules
+recursive-include src *.c *.cc *.h
+recursive-exclude Makefile

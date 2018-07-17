@@ -11,12 +11,11 @@ deploy:
   password:
     secure: I2+AvqhnKvlwRoiuiQ/oco+pzo1qjle2t4fObQN65003AVJJUZW76lPXswyApCzEPSbHjiTt7xHfmOi9RJJ+xkXVst7s4jdVAmhOB3bf1h5G1gHWc13G52IrQYkjhEQuZVwmlfmCBtvYBNkJUEJEW0xxS6qKUdHLF8i1aPdjUneVkrqclX9P+Zd8mRK3VYXBL7VGqZ+yAX9Hw9/deFnVNymtXAcA9y/GkKruKDE44n/qLsrNvqo5+ClmrITkG9phhSpQRE9dlIBNpB+Gb04UKqFEbC71Y1x+aeWyg/cNkc2wUJtgPxE62RzzbjUfnTnoy+sEo+wvllfwlKR4tKcaon/hZGCsXflXgVPNCUDJ2M5lRufvtSNpGIxeG2nWUv2hioTVvSE96u+kKhHgv6OcN9jaS8qAY8CMTloXZYUDPSNrH9BTOReEhBNoCPwmUqs4dt0xVlfz626SQQdUravrHZlVhMKtNgjzrv3PVbNvAMwzjEJgBLwc7otWmgh3/mRYpIIOVRzJEg2SZQz0sk16t21PUqwZh7dVTYCKzjcbsVUjMpRnamtypPesFjNwS06s4fLAzhKc/pMeue4wliEFCE7l/CVmyFfWm0oIzxziBySRx+YJSeKrCXieL400+WN1SsdnArg+wDiWv80BM2NJAflwM7fRNXRvz61OMn1mtAk=
   provider: pypi
-  skip_cleanup: false
+  skip_cleanup: true
   user: yihui
 install:
 - python setup.py build
-- python setup.py bdist_wheel
-- pip install ./dist/speexdsp*.whl
+- pip install .
 language: python
 python:
 - '2.6'
